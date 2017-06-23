@@ -3,6 +3,7 @@ package com.example.daniel.facerec;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
@@ -49,17 +51,39 @@ public class ReadyToSend extends AppCompatActivity {
         send.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
-                        List<Uri> paths = new ArrayList<Uri>();
-                        paths.add( Uri.parse("android.resource://com.example.daniel.facerec/drawable/prom.JPG"));
-                        email(ReadyToSend.this,"danielzhou2012@gmail.com", "", "Pictures",
-                                "", paths);
+                        Intent picMessageIntent = new Intent(android.content.Intent.ACTION_SEND);
+                        picMessageIntent.setType("image/jpeg");
+
+                        File prom = new File(Environment.getExternalStoragePublicDirectory(
+                                        Environment.DIRECTORY_DOWNLOADS),
+                                "prom.JPG");
+                        File hack = new File(Environment.getExternalStoragePublicDirectory(
+                                Environment.DIRECTORY_DOWNLOADS),
+                                "hack.JPG");
+                        File grad = new File(Environment.getExternalStoragePublicDirectory(
+                                Environment.DIRECTORY_DOWNLOADS),
+                                "graduation.JPG");
+                        picMessageIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(prom));
+                        picMessageIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(hack));
+                        picMessageIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(grad));
+                        List<Uri> pathsDan = new ArrayList<>();
+                        pathsDan.add(Uri.fromFile(prom));
+                        pathsDan.add(Uri.fromFile(hack));
+                        email(ReadyToSend.this, "danielzhou2012@gmail.com", "", "Pictures",
+                                "", pathsDan);
+                        List<Uri>pathsWill = new ArrayList<>();
+                        pathsWill.add(Uri.fromFile(prom));
+                        pathsWill.add(Uri.fromFile(grad));
+                        pathsWill.add(Uri.fromFile(hack));
+                        email(ReadyToSend.this, "superwilliamli@yahoo.com", "", "Pictures",
+                                "", pathsWill);
                     }
                 }
         );
     }
+
     public static void email(Context context, String emailTo, String emailCC,
-                             String subject, String emailText, List<Uri> filePaths)
-    {
+                             String subject, String emailText, List<Uri> filePaths) {
         //need to "send multiple" to get more than one attachment
         final Intent emailIntent = new Intent(Intent.ACTION_SEND_MULTIPLE);
         emailIntent.setType("text/plain");
