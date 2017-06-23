@@ -2,8 +2,10 @@ package com.example.daniel.facerec;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,33 +15,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.os.Bundle;
-import android.app.Activity;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-
-
-import android.content.ContentValues;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Bitmap.CompressFormat;
-import android.net.Uri;
-
-import android.provider.MediaStore.Images;
-import android.provider.MediaStore.Images.Media;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 
 public class ReadyToSend extends AppCompatActivity {
 
@@ -77,9 +52,11 @@ public class ReadyToSend extends AppCompatActivity {
                         pathsWill.add(Uri.fromFile(hack));
                         email(ReadyToSend.this, "superwilliamli@yahoo.com", "", "Pictures",
                                 "", pathsWill);
+
                     }
                 }
         );
+
     }
 
     public static void email(Context context, String emailTo, String emailCC,
