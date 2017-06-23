@@ -20,13 +20,12 @@ import android.provider.*;
 import com.microsoft.projectoxford.face.*;
 import com.microsoft.projectoxford.face.contract.*;
 
-
 public class MainActivity extends AppCompatActivity {
 
     private final int PICK_IMAGE = 1;
     private ProgressDialog detectionProgressDialog;
     private FaceServiceClient faceServiceClient =
-            new FaceServiceRestClient("https://westcentralus.api.cognitive.microsoft.com/face/v1.0","53ad9e1991ae42d399c0bc4d2037b073");
+            new FaceServiceRestClient("53ad9e1991ae42d399c0bc4d2037b073");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
