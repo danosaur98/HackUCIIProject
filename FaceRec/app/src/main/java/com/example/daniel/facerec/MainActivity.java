@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private final int PICK_IMAGE = 1;
     private ProgressDialog detectionProgressDialog;
     private FaceServiceClient faceServiceClient =
-            new FaceServiceRestClient("53ad9e1991ae42d399c0bc4d2037b073");
+            new FaceServiceRestClient("https://westcentralus.api.cognitive.microsoft.com/face/v1.0", "53ad9e1991ae42d399c0bc4d2037b073");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(Color.RED);
-        int stokeWidth = 2;
+        int stokeWidth = 6;
         paint.setStrokeWidth(stokeWidth);
         if (faces != null) {
             for (Face face : faces) {
