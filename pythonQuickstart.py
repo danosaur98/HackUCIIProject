@@ -31,7 +31,7 @@ params = urllib.urlencode({
 })
 
 # The URL of a JPEG image to analyze.
-body = "{'url':'https://lh3.googleusercontent.com/nIOKj1FXaY6xzOOPzhcFdzFjXv-OsmqQ_b-RIrQXGMYNPpHnbqz52FY9cFLfnBGBJmglR57lBp0kbvK_IKQdpyGqtwMpAXDbkbgz-dCPd_VlPAvhTrWEugQ0HEPSdpQSQxSJMk2CJRjrbK2dmoZiCOb-cYB8p_NnRyEBXLhBIs_uQdt1v16osd4Z8O7KttxgwbE3Yl7pnek9AX8W3e0sa6Xbi7NN4fILY881GDVeLCuZG4wwCLMfgSGaDFdB06ozQbgtSnVqtEVK53PlOopwTH_ApYuhKn92wL3D7FWtuGAwEXuq4SqkncQZUiVhEH00ZXpLyF8XQ5A7TPxXWM_-OLTQYB6gpstaRS1hbaxe0mLGbGKJ7I-jgKUVP7S4RAhsYkcRviE1ubIWOJa-A44RhF7jAnxMoTKe7l4N9Yc4rAHOL_pcaz60yal2ZgsWvN6jTqSdJxXVQKGaWl0b98fJ-dyIwJHdqYVTXPsefvAJs0BQjcyHmVwWND8kUSGs8kzuWqw4wc2bBB3Dp1KMIj8LhGtcaRnoBSPwyf_QePVQ-HFDA1v5gdc2ENHBmqmjeVaL9X0OAP5kzkIFkKJ_iTWCq1rO8oooLOcgr-w9iIBmxPxLRC_A-w=s0'}"
+body = "{'url':'http://i.imgur.com/LFPzoOn.jpg'}"
 
 try:
     # Execute the REST API call and get the response.
