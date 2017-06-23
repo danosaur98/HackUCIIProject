@@ -1,8 +1,6 @@
 # IdentiFace
 This is a project made at HackUCII. [Here is the devpost.](https://devpost.com/software/hackuciiproject)
 
-![IdentiFace](IdentiFaceIcon.png)
-
 ### Inspiration
 The idea was born when the developers, during prom and their high school graduation, realized how much of a hassle it was to send pictures to all the people they took pictures with. So they decided to make an Android application to do it for them.
 
@@ -14,3 +12,5 @@ The app was built in Android Studio, written with gradle, Java, and XML. Also, A
 
 ### What's next?
 Batch upload capability, full sharing functionality through MMS texting and Facebook Messages.
+
+![IdentiFace](IdentiFaceIcon.png)
