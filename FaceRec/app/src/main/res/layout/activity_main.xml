@@ -13,10 +13,19 @@
         android:layout_above="@+id/button1" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="276dp"
         android:layout_height="wrap_content"
         android:text="Browse"
         android:id="@+id/button1"
         android:layout_alignParentBottom="true" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:text="Send"
+        app:layout_anchor="@+id/imageView1"
+        app:layout_anchorGravity="top|right" />
 
 </android.support.design.widget.CoordinatorLayout>
