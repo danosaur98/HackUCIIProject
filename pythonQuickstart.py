@@ -31,7 +31,7 @@ params = urllib.urlencode({
 })
 
 # The URL of a JPEG image to analyze.
-body = "{'url':'http://i.imgur.com/LFPzoOn.jpg'}"
+body = "{'url':'http://i.imgur.com/KYJT1lE.jpg'}"
 
 try:
     # Execute the REST API call and get the response.
@@ -40,12 +40,10 @@ try:
     response = conn.getresponse()
     data = response.read()
 
-    print type(data)
     # 'data' contains the JSON data. The following formats the JSON data for display.
     parsed = json.loads(data)
-    print parsed[0]['emotion']
-    # print ("Response:")
-    # print (json.dumps(parsed, sort_keys=True, indent=2))
+    print ("Response:")
+    print (json.dumps(parsed, sort_keys=True, indent=2))
     conn.close()
 
 except Exception as e:
