@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Daniel\\Documents\\GitHub\\HackUCIIProject\\FaceRec\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Daniel\\.android\\build-cache\\fc311e7e06170e5fec1165290bc0126280c7f51d\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\Daniel\\Documents\\GitHub\\HackUCIIProject\\FaceRec\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\Daniel\\.android\\build-cache\\fc311e7e06170e5fec1165290bc0126280c7f51d\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\Users\\Daniel\\Documents\\GitHub\\HackUCIIProject\\FaceRec\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\Daniel\\.android\\build-cache\\fc311e7e06170e5fec1165290bc0126280c7f51d\\output\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Daniel\\Documents\\GitHub\\HackUCIIProject\\FaceRec\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Daniel\\.android\\build-cache\\fc311e7e06170e5fec1165290bc0126280c7f51d\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+    }
+]
