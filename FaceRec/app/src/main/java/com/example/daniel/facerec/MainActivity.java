@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
         Button send = (Button) findViewById(R.id.button);
         send.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent k = new Intent(MainActivity.this, ContactsActivity.class);
-                startActivity(k);
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, ContactsActivity.class);
+                startActivity(i);
             }
         });
 

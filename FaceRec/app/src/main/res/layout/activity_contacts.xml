@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,24 +8,38 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="184dp"
+        android:layout_width="200dp"
         android:layout_height="103dp"
+        android:layout_alignLeft="@+id/button3"
+        android:layout_alignStart="@+id/button3"
+        android:layout_below="@+id/button3"
+        android:layout_marginTop="26dp"
         android:text="WILLIAM LI"
         tools:layout_editor_absoluteX="184dp"
         tools:layout_editor_absoluteY="145dp" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="184dp"
+        android:layout_width="200dp"
         android:layout_height="103dp"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:layout_below="@+id/button2"
+        android:layout_marginTop="26dp"
         android:text="UNKNOWN"
         tools:layout_editor_absoluteX="184dp"
         tools:layout_editor_absoluteY="273dp" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="184dp"
+        android:layout_width="200dp"
         android:layout_height="103dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="39dp"
         android:text="DANIEL ZHOU"
         tools:layout_editor_absoluteX="184dp"
         tools:layout_editor_absoluteY="16dp" />
@@ -36,7 +50,12 @@
         android:layout_height="99dp"
         app:srcCompat="@drawable/danthumbnail"
         tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -44,7 +63,10 @@
         android:layout_height="98dp"
         app:srcCompat="@drawable/willthumbnail"
         tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="145dp" />
+        tools:layout_editor_absoluteY="145dp"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignLeft="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -52,7 +74,10 @@
         android:layout_height="100dp"
         app:srcCompat="@drawable/arjunthumbnail"
         tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="273dp" />
+        tools:layout_editor_absoluteY="273dp"
+        android:layout_alignBottom="@+id/button4"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
 
     <Button
         android:id="@+id/button5"
@@ -60,5 +85,9 @@
         android:layout_height="wrap_content"
         android:text="Send"
         tools:layout_editor_absoluteX="276dp"
-        tools:layout_editor_absoluteY="420dp" />
-</android.support.constraint.ConstraintLayout>
+        tools:layout_editor_absoluteY="420dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/button4"
+        android:layout_alignEnd="@+id/button4"
+        android:layout_marginBottom="32dp" />
+</RelativeLayout>

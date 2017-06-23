@@ -7,15 +7,16 @@ import android.view.View;
 import android.widget.Button;
 
 public class ContactsActivity extends AppCompatActivity {
-    Button Daniel = (Button) findViewById(R.id.button3);
-    Button William = (Button) findViewById(R.id.button2);
-    Button Unknown = (Button) findViewById(R.id.button4);
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
+        Button Daniel = (Button) findViewById(R.id.button3);
+        Button William = (Button) findViewById(R.id.button2);
+        Button Unknown = (Button) findViewById(R.id.button4);
         Daniel.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
