@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button button1 = (Button)findViewById(R.id.button1);
-        Button send = (Button) findViewById(R.id.button);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,9 +39,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(Intent.createChooser(gallIntent, "Select Picture"), PICK_IMAGE);
             }
         });
+
+        Button send = (Button) findViewById(R.id.button);
         send.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 Intent k = new Intent(MainActivity.this, ContactsActivity.class);
                 startActivity(k);
             }
