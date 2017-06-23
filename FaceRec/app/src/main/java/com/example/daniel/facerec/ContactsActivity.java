@@ -8,8 +8,6 @@ import android.widget.Button;
 
 public class ContactsActivity extends AppCompatActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,16 +26,16 @@ public class ContactsActivity extends AppCompatActivity {
         William.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
-                        Intent i = new Intent(ContactsActivity.this, WilliamLiActivity.class);
-                        startActivity(i);
+                        Intent k = new Intent(ContactsActivity.this, WilliamLiActivity.class);
+                        startActivity(k);
                     }
                 }
         );
         Unknown.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
-                        Intent i = new Intent(ContactsActivity.this, ArjunActivity.class);
-                        startActivity(i);
+                        Intent p = new Intent(ContactsActivity.this, ArjunActivity.class);
+                        startActivity(p);
                     }
                 }
         );

@@ -1,84 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.daniel.facerec.ArjunActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignEnd="@+id/firstName"
+        android:layout_alignRight="@+id/firstName"
+        android:layout_alignTop="@+id/imageView10"
+        app:srcCompat="@drawable/hackuc" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/Images"
+        android:layout_alignStart="@+id/Images"
+        android:layout_below="@+id/Images"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/graduation" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        app:srcCompat="@drawable/arjunthumbnail"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="26dp" />
+
+    <EditText
+        android:id="@+id/firstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText4"
+        android:layout_alignStart="@+id/editText4"
+        android:layout_below="@+id/editText4"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="Messenger:"
+        android:inputType="textPersonName" />
+
     <EditText
         android:id="@+id/editText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/createEvent"
-        android:layout_below="@+id/locationAddress"
-        android:ems="10"
-        android:hint="Messenger:"
-        android:inputType="date"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="313dp" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/createEvent"
-        android:layout_below="@+id/locationAddress"
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_alignStart="@+id/editText3"
+        android:layout_below="@+id/editText3"
+        android:layout_marginTop="13dp"
         android:ems="10"
         android:hint="Email:"
-        android:inputType="date"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="234dp" />
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/createEvent"
-        android:layout_below="@+id/locationAddress"
+        android:layout_marginTop="11dp"
         android:ems="10"
         android:hint="Phone Number:"
-        android:inputType="date"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="159dp" />
+        android:inputType="textPersonName"
+        android:layout_below="@+id/imageView7"
+        android:layout_alignLeft="@+id/imageView7"
+        android:layout_alignStart="@+id/imageView7" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/createEvent"
-        android:layout_below="@+id/locationAddress"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="Last Name:"
-        android:inputType="date"
-        tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="68dp" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="116dp"
-        android:layout_height="116dp"
-        app:srcCompat="@drawable/arjunthumbnail"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/date"
+        android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/createEvent"
-        android:layout_below="@+id/locationAddress"
+        android:layout_alignTop="@+id/imageView7"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/imageView7"
+        android:layout_toRightOf="@+id/imageView7"
         android:ems="10"
         android:hint="First Name:"
-        android:inputType="date"
-        tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:inputType="textPersonName" />
 
-    <Button
-        android:id="@+id/button6"
+    <TextView
+        android:id="@+id/Images"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="423dp" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_marginTop="17dp"
+        android:text="Images"
+        android:textSize="20dp"
+        android:layout_below="@+id/firstName"
+        android:layout_alignLeft="@+id/firstName"
+        android:layout_alignStart="@+id/firstName" />
+
+    <Button
+        android:id="@+id/arjunsbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:text="Save" />
+
+</RelativeLayout>
