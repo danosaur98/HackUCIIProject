@@ -44,15 +44,15 @@ public class ReadyToSend extends AppCompatActivity {
                         List<Uri> pathsDan = new ArrayList<>();
                         pathsDan.add(Uri.fromFile(prom));
                         pathsDan.add(Uri.fromFile(hack));
-                        email(ReadyToSend.this, "danielzhou2012@gmail.com", "", "Pictures",
-                                "", pathsDan);
+
                         List<Uri>pathsWill = new ArrayList<>();
                         pathsWill.add(Uri.fromFile(prom));
                         pathsWill.add(Uri.fromFile(grad));
                         pathsWill.add(Uri.fromFile(hack));
                         email(ReadyToSend.this, "superwilliamli@yahoo.com", "", "Pictures",
                                 "", pathsWill);
-
+                        email(ReadyToSend.this, "danielzhou2012@gmail.com", "", "Pictures",
+                                "", pathsDan);
                     }
                 }
         );
