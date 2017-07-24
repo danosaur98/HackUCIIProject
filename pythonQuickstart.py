@@ -31,20 +31,23 @@ params = urllib.urlencode({
 })
 
 # The URL of a JPEG image to analyze.
-body = "{'url':'http://i.imgur.com/KYJT1lE.jpg'}"
+photos = []
+files = ["{'url':'http://i.imgur.com/QxPhBY3.jpg'}"]
+for body in files:
+    try:
+        # Execute the REST API call and get the response.
+        conn = httplib.HTTPSConnection(uri_base)
+        conn.request("POST", "/face/v1.0/detect?%s" % params, body, headers)
+        response = conn.getresponse()
+        data = response.read()
 
-try:
-    # Execute the REST API call and get the response.
-    conn = httplib.HTTPSConnection(uri_base)
-    conn.request("POST", "/face/v1.0/detect?%s" % params, body, headers)
-    response = conn.getresponse()
-    data = response.read()
+        # 'data' contains the JSON data. The following formats the JSON data for display.
+        photos.append(json.loads(data))
+        conn.close()
 
-    # 'data' contains the JSON data. The following formats the JSON data for display.
-    parsed = json.loads(data)
+    except Exception as e:
+        print("[Errno {0}] {1}".format(e.errno, e.strerror))
+
+for i in photos:
     print ("Response:")
-    print (json.dumps(parsed, sort_keys=True, indent=2))
-    conn.close()
-
-except Exception as e:
-    print("[Errno {0}] {1}".format(e.errno, e.strerror))
+    print (json.dumps(i, sort_keys=True, indent=2))
